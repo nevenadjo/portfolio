@@ -1,0 +1,863 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Sen', sans-serif;
+}
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.center {
+  width: 80%;
+  margin: 0px auto;
+}
+@font-face {
+  font-family: 'font';
+  src: url(font/font.otf);
+}
+header {
+  background-color: #fff;
+}
+header nav {
+  padding: 5px 0px;
+}
+header nav ul {
+  align-items: center;
+}
+header nav ul li {
+  list-style-type: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #1b2757;
+  position: relative;
+}
+header nav ul li a #logo {
+  height: 60px;
+}
+header nav ul li a #logo img {
+  height: 100%;
+}
+.underline a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #1b2757;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.underline a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+#cover {
+  background-image: url('../img/cover.jpg');
+  background-size: cover;
+  height: 70vh;
+  width: 100%;
+}
+#cover #cover-text {
+  position: relative;
+  height: 25vh;
+  width: inherit;
+}
+#cover #cover-text h1 {
+  font-family: 'font';
+  font-size: 90px;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 7px;
+  color: #1b2757;
+  position: absolute;
+  left: 31%;
+  top: 11%;
+}
+#cover #cover-text h2 {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  font-size: 40px;
+  color: #1b2757;
+}
+#cover .button {
+  width: auto;
+  justify-content: center;
+  margin-top: 80px;
+}
+#cover .button .first {
+  margin-right: 40px;
+  padding: 2vh;
+  background-color: #fff;
+  color: #1b2757;
+  border-radius: 25px;
+  border: 1px dotted #565555;
+  font-size: 3vh;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+#cover .button .second {
+  padding: 2vh;
+  background-color: #1b2757;
+  color: #fff;
+  border-radius: 25px;
+  border: 1px dotted #565555;
+  font-size: 3vh;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+#spinner {
+  animation-name: spinner;
+  animation-timing-function: linear;
+  text-align: center;
+  animation-duration: 2s;
+  font-size: inherit;
+  color: inherit;
+  display: inline-block;
+}
+@keyframes spinner {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(180deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+#cover .button a:hover {
+  box-shadow: 1px 1px 2px #a6a4a4;
+}
+.white {
+  width: 100%;
+  height: 150px;
+  background-color: #fff;
+}
+#about {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 40px;
+}
+#about h3 {
+  margin: 40px auto;
+  font-size: 28px;
+  color: #1b2757;
+  text-align: center;
+}
+#about .about-me {
+  width: 50%;
+  margin-top: 20px;
+}
+#about .about-me .center {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#about .about-me .center .img-me {
+  width: 60%;
+  border-right: 1px solid #14c2ea;
+  border-radius: 25px;
+  padding: 15px;
+}
+#about .about-me .center .img-me img {
+  width: 100%;
+  margin-right: 5px;
+  border-radius: 25px;
+}
+#about .about-me .center .about-name {
+  color: #1b2757;
+  letter-spacing: 4px;
+  font-size: 22px;
+  margin: 15px 0px;
+  font-weight: bold;
+  font-style: italic;
+}
+#about .about-me .center .about-text {
+  color: #565555;
+  text-align: justify;
+  letter-spacing: 1%;
+  line-height: 25px;
+  font-size: 17px;
+  font-style: italic;
+}
+#about .skills {
+  width: 50%;
+}
+#about .skills .center {
+  width: 80%;
+  flex-wrap: wrap;
+}
+#about .skills .center .skill {
+  padding: 15px;
+  width: 130px;
+  height: 130px;
+  margin-top: 40px;
+  padding: 2vh;
+  background-color: #fff;
+  color: #1b2757;
+  border-radius: 25px;
+  border: 1px dotted #565555;
+  font-size: 3vh;
+  border: 1px solid #14c2ea;
+}
+#about .skills .center .skill h4 {
+  font-size: 18px;
+  text-align: center;
+}
+#about .skills .center .skill h4 i {
+  font-size: 80px;
+  display: block;
+}
+#services {
+  width: 100%;
+  background-color: #f2f2f2;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+#services .center {
+  width: 85%;
+}
+#services .center h3 {
+  margin: 40px auto;
+  font-size: 28px;
+  color: #1b2757;
+  text-align: center;
+  padding: 40px 0px;
+  margin: 0px auto;
+}
+#services .center .services-block .service {
+  width: 22%;
+}
+#services .center .services-block .service i {
+  font-size: 40px;
+  text-align: center;
+  display: block;
+  color: #14c2ea;
+  margin-bottom: 15px;
+  animation-name: spinner;
+  animation-timing-function: linear;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+#services .center .services-block .service h4 {
+  color: #1b2757;
+  text-align: center;
+  margin-bottom: 15px;
+}
+#services .center .services-block .service p {
+  color: #565555;
+  text-align: justify;
+  font-size: 14px;
+}
+#projects {
+  width: 100%;
+}
+#projects h3 {
+  padding-bottom: 15px;
+}
+#projects .center h3 {
+  margin: 40px auto;
+  font-size: 28px;
+  color: #1b2757;
+  text-align: center;
+}
+#projects .center .projects-block {
+  flex-wrap: wrap;
+}
+#projects .center .projects-block .p4 {
+  margin-top: 50px;
+}
+#projects .center .projects-block .p5 {
+  margin-top: 50px;
+}
+#projects .center .projects-block .p6 {
+  margin-top: 50px;
+}
+#projects .center .projects-block .project {
+  width: 26%;
+}
+#projects .center .projects-block .project .block {
+  position: relative;
+}
+#projects .center .projects-block .project .block .border-1 {
+  border: 1px solid #14c2ea;
+}
+#projects .center .projects-block .project .block .border-2 {
+  border: 1px solid #1b2757;
+}
+#projects .center .projects-block .project .block .border-3 {
+  border: 1px solid #14c2ea;
+}
+#projects .center .projects-block .project .block .border-4 {
+  border: 1px solid #1b2757;
+}
+#projects .center .projects-block .project .block .border-5 {
+  border: 1px solid #14c2ea;
+}
+#projects .center .projects-block .project .block .border-6 {
+  border: 1px solid #1b2757;
+}
+#projects .center .projects-block .project .block .border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  top: -15px;
+  right: -20px;
+  z-index: 2;
+}
+#projects .center .projects-block .project .block img {
+  width: 100%;
+  border-radius: 25px;
+  position: relative;
+  z-index: 100;
+  border: 1px solid #a6a4a4;
+  transition: transform 0.2s ease;
+}
+#projects .center .projects-block .project p {
+  color: #565555;
+  text-align: center;
+  margin: 20px 0px;
+}
+#projects .center .projects-block .project .block img:hover {
+  transform: scale(1.05);
+}
+#contact {
+  width: 100%;
+}
+#contact h3 {
+  margin: 40px auto;
+  font-size: 28px;
+  color: #1b2757;
+  text-align: center;
+}
+#contact .contact-block {
+  width: 100%;
+}
+#contact .contact-block .form {
+  padding: 40px 0px;
+  width: 50%;
+  background-color: #1b2757;
+}
+#contact .contact-block .form form {
+  width: 70%;
+  margin: 0px auto;
+}
+#contact .contact-block .form form #submit {
+  background-color: #14c2ea;
+  font-weight: bold;
+  margin: 0px;
+}
+#contact .contact-block .form form input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 6px;
+  border-radius: 0px;
+  border: 0px;
+  font-family: 'Sen', sans-serif;
+  font-size: 15px;
+}
+#contact .contact-block .form form textarea {
+  width: 100%;
+  padding: 6px;
+  font-family: 'Sen', sans-serif;
+  font-size: 15px;
+  border-radius: 0px;
+}
+#contact .contact-block .info {
+  width: 50%;
+  background-color: #f2f2f2;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#contact .contact-block .info .info-block {
+  margin-top: 20px;
+}
+#contact .contact-block .info .info-block p {
+  display: inline-block;
+  font-size: 20px;
+  color: #565555;
+}
+#contact .contact-block .info .info-block i {
+  font-size: 20px;
+  color: #14c2ea;
+}
+#contact .contact-block .info .info-block a {
+  text-decoration: none;
+  color: #565555;
+  font-size: 20px;
+}
+#contact .contact-block .info .info-block .info-n {
+  margin: 40px 0px;
+}
+#contact .contact-block .info .social-block a {
+  text-decoration: none;
+  margin-right: 10px;
+}
+#contact .contact-block .info .social-block a i {
+  font-size: 25px;
+  color: #1b2757;
+}
+#contact .contact-block .info .social-block .last {
+  margin-right: 0px;
+}
+footer {
+  background-color: #fff;
+  border-top: 1px solid #a6a4a4;
+  width: 100%;
+}
+footer .center {
+  position: relative;
+  width: 90%;
+  align-items: center;
+}
+footer .center .block2 {
+  width: 30%;
+}
+footer .center .block2 img {
+  width: 50px;
+  margin: 10px auto;
+  display: block;
+  z-index: 2;
+  position: relative;
+}
+footer .center .block2 .round {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -80%);
+  border-top: 1px solid #a6a4a4;
+}
+footer .center .block2 .round i {
+  font-size: 22px;
+  color: #dad9d9;
+  position: inherit;
+  left: 42%;
+  top: 15px;
+}
+footer .center ul {
+  display: flex;
+  list-style-type: none;
+  width: 30%;
+  justify-content: end;
+}
+footer .center ul .mg {
+  margin: 0px 10px;
+}
+footer .center ul li a {
+  color: #565555;
+  font-size: 22px;
+}
+footer .center p {
+  width: 30%;
+  color: #565555;
+  font-size: 13px;
+}
+@media screen and (max-width: 1025px) {
+  #about {
+    width: 100%;
+  }
+  #about .skills .center .skill {
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+  #services .center {
+    width: 92%;
+  }
+  #services .center .services-block .service {
+    width: 23%;
+  }
+}
+@media screen and (max-width: 769px) {
+  .center {
+    width: 90%;
+  }
+  .center nav a {
+    font-size: 18px;
+  }
+  .center nav a #logo {
+    height: 50px;
+  }
+  #cover #cover-text h1 {
+    font-size: 60px;
+  }
+  #cover #cover-text h2 {
+    font-size: 27px;
+    top: 95%;
+    left: 48%;
+  }
+  #about .about-me .center {
+    width: 80%;
+  }
+  #about .about-me .center .img-me {
+    width: 65%;
+  }
+  #about .about-me .center .about-name {
+    font-size: 18px;
+    letter-spacing: 3px;
+  }
+  #about .about-me .center .about-text {
+    font-size: 16px;
+    letter-spacing: 0px;
+  }
+  #about .skills .center {
+    width: 80%;
+  }
+  #about .skills .center .skill {
+    width: 110px;
+    height: 110px;
+  }
+  #about .skills .center .skill h4 {
+    font-size: 16px;
+  }
+  #about .skills .center .skill h4 i {
+    font-size: 70px;
+  }
+  #services .center .services-block {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  #services .center .services-block .service {
+    width: 42%;
+  }
+  #services .center .services-block .mg1 {
+    margin-top: 50px;
+  }
+  #projects .center {
+    width: 80%;
+  }
+  #contact .contact-block .form form {
+    width: 82%;
+  }
+  #contact .contact-block .info .info-block i {
+    font-size: 18px;
+  }
+  #contact .contact-block .info .info-block p {
+    font-size: 18px;
+  }
+  #contact .contact-block .info .info-block a {
+    font-size: 18px;
+  }
+  #contact .contact-block .info .social-block a i {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 601px) {
+  #cover #cover-text h1 {
+    font-size: 60px;
+    left: 29%;
+  }
+  #cover #cover-text h2 {
+    font-size: 27px;
+    top: 95%;
+    left: 33%;
+  }
+  #about h3 {
+    font-size: 24px;
+  }
+  #about .about-me .center {
+    width: 85%;
+  }
+  #about .about-me .center .about-name {
+    font-size: 16px;
+  }
+  #about .about-me .center .about-text {
+    font-size: 14px;
+  }
+  #about .skills .center {
+    width: 85%;
+  }
+  #services .center h3 {
+    font-size: 24px;
+  }
+  #projects .center h3 {
+    font-size: 24px;
+  }
+  #projects .center .projects-block .p3 {
+    margin-top: 50px;
+  }
+  #projects .center .projects-block .project {
+    width: 45%;
+  }
+  #contact h3 {
+    font-size: 24px;
+  }
+  #contact .contact-block {
+    flex-wrap: wrap;
+  }
+  #contact .contact-block .form {
+    width: 100%;
+  }
+  #contact .contact-block .form form {
+    width: 80%;
+  }
+  #contact .contact-block .info {
+    width: 100%;
+    padding-bottom: 80px;
+    padding-top: 20px;
+  }
+  #contact .contact-block .info .info-block {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #contact .contact-block .info .info-block i {
+    font-size: 16px;
+  }
+  #contact .contact-block .info .info-block p {
+    font-size: 16px;
+  }
+  #contact .contact-block .info .info-block a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 481px) {
+  header nav ul {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  header nav ul li:nth-of-type(3) {
+    order: 1;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  header nav ul li:nth-of-type(3) #logo {
+    margin: 0px auto;
+  }
+  header nav ul li:nth-of-type(1) {
+    order: 2;
+    width: 25%;
+  }
+  header nav ul li:nth-of-type(2) {
+    order: 3;
+    width: 25%;
+  }
+  header nav ul li:nth-of-type(4) {
+    order: 4;
+    width: 25%;
+  }
+  header nav ul li:nth-of-type(5) {
+    order: 5;
+    width: 25%;
+  }
+  #cover #cover-text h1 {
+    font-size: 50px;
+    top: 18%;
+  }
+  #cover #cover-text h2 {
+    font-size: 24px;
+  }
+  #about h3 {
+    font-size: 22px;
+  }
+  #about .about-me .center {
+    width: 90%;
+  }
+  #about .about-me .center .about-name {
+    font-size: 15px;
+  }
+  #about .about-me .center .about-text {
+    font-size: 13px;
+  }
+  #about .skills {
+    margin-top: 20px;
+  }
+  #about .skills .center {
+    justify-content: space-around;
+    width: 90%;
+  }
+  #about .skills .center .skill {
+    width: 95px;
+    height: 95px;
+  }
+  #about .skills .center .skill h4 {
+    font-size: 14px;
+  }
+  #about .skills .center .skill h4 i {
+    font-size: 60px;
+  }
+  #services .center h3 {
+    font-size: 22px;
+  }
+  #services .center .services-block .service {
+    width: 90%;
+  }
+  #services .center .services-block .mg2 {
+    margin-top: 50px;
+  }
+  #projects .center {
+    width: 85%;
+  }
+  #projects .center h3 {
+    font-size: 22px;
+  }
+  #contact h3 {
+    font-size: 22px;
+  }
+  footer .center .blok2 img {
+    width: 30px;
+  }
+  footer .center p {
+    font-size: 12px;
+  }
+  footer .center ul li a {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 415px) {
+  .center {
+    width: 97%;
+  }
+  .center nav a {
+    font-size: 15px;
+  }
+  .center nav a #logo {
+    height: 40px;
+  }
+  .white {
+    height: 90px;
+  }
+  #cover #cover-text h1 {
+    font-size: 35px;
+    top: 45%;
+  }
+  #cover #cover-text h2 {
+    font-size: 16px;
+    left: 36%;
+  }
+  #cover .button .first {
+    font-size: 12px;
+  }
+  #cover .button .second {
+    font-size: 12px;
+  }
+  #about h3 {
+    font-size: 20px;
+    margin: 25px auto;
+  }
+  #about .block {
+    flex-direction: column;
+    align-items: center;
+  }
+  #about .block .about-me {
+    width: 85%;
+    margin-bottom: 15px;
+  }
+  #about .block .skills {
+    width: 85%;
+  }
+  #services .center h3 {
+    font-size: 20px;
+    padding: 45px;
+  }
+  #services .center .services-block .service i {
+    font-size: 30px;
+  }
+  #services .center .services-block .service h4 {
+    font-size: 15px;
+  }
+  #services .center .services-block .service p {
+    font-size: 13px;
+  }
+  #projects .center h3 {
+    font-size: 20px;
+  }
+  #projects .center .projects-block {
+    justify-content: space-evenly;
+  }
+  #projects .center .projects-block .p2 {
+    margin-top: 50px;
+  }
+  #projects .center .projects-block .project {
+    width: 90%;
+  }
+  #projects .center .projects-block .project p {
+    font-size: 14px;
+  }
+  #contact h3 {
+    font-size: 20px;
+  }
+  #contact .contact-block .form form input {
+    font-size: 13px;
+  }
+  #contact .contact-block .form form textarea {
+    font-size: 13px;
+  }
+  #contact .contact-block .info {
+    padding-bottom: 60px;
+    padding-top: 10px;
+  }
+  #contact .contact-block .info .info-block {
+    margin-bottom: 20px;
+  }
+  #contact .contact-block .info .info-block i {
+    font-size: 14px;
+  }
+  #contact .contact-block .info .info-block p {
+    font-size: 14px;
+  }
+  #contact .contact-block .info .info-block a {
+    font-size: 14px;
+  }
+  #contact .contact-block .info .info-block .info-n {
+    margin: 20px auto;
+  }
+  #contact .contact-block .info .social-block a i {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 376px) {
+  #about .about-me {
+    width: 90%;
+  }
+  #about .skills {
+    width: 85%;
+  }
+  #about .skills .center {
+    justify-content: space-around;
+  }
+  #about .skills .center .skill {
+    width: 100px;
+    height: 100px;
+  }
+  #about .skills .center .skill h4 i {
+    font-size: 65px;
+  }
+}
+@media screen and (max-width: 321px) {
+  .white {
+    height: 70px;
+  }
+  #cover #cover-text h1 {
+    font-size: 28px;
+    top: 55%;
+    left: 28%;
+  }
+  #cover #cover-text h2 {
+    font-size: 14px;
+    left: 35%;
+    top: 90%;
+  }
+  #about h3 {
+    margin: 20px 0px 0px 0px;
+  }
+  #about .skills {
+    width: 90%;
+  }
+}
