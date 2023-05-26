@@ -200,7 +200,7 @@ header{
                 width: 60%;
                 border-right: 1px solid @blue;
                 border-radius: 25px;
-                padding: 15px;
+                padding: 16px;
                 img{
                     width:100%;
                     margin-right: 5px;
@@ -228,12 +228,10 @@ header{
     .skills{
         width: 50%;
         .center{
-            width: 80%;
             flex-wrap: wrap;
             .skill{
-                padding: 15px;
-                width: 130px;
-                height: 130px;
+                width: 31%;
+                height: fit-content;
                 margin-top: 40px;
                 .button(@white, @dark-blue);
                 border: 1px solid @blue;
@@ -241,7 +239,7 @@ header{
                     font-size: 18px;
                     text-align: center;
                     i{
-                        font-size: 80px;
+                        font-size: 75px;
                         display:block;
                     }
                 }
@@ -512,14 +510,6 @@ footer{
 @media screen and (max-width:1025px){
     #about{
         width: 100%;
-        .skills{
-            .center{
-                .skill{
-                    margin-top:0px;
-                    margin-bottom:30px;
-                }
-            }
-        }
     }
     #services{
         .center{
@@ -562,6 +552,7 @@ footer{
         .about-me{
             .center{
                 width:80%;
+                justify-content: space-around;
                 .img-me{
                     width:65%;
                 }
@@ -579,8 +570,9 @@ footer{
             .center{
                 width: 80%;
                 .skill{
-                    width: 110px;
-                    height: 110px;
+                    margin-top: 5px;
+                    margin-bottom: 30px;
+                    width: 45%;
                     h4{
                         font-size: 16px;
                         i{
@@ -673,8 +665,16 @@ footer{
         }
         .skills{
             .center{
-                width: 85%;
-               
+                width: 87%;
+                justify-content: space-around;
+                .skill{
+                    width: 45%;
+                    h4{
+                        i{
+                            font-size: 58px;
+                        }
+                    }
+                }
             }
 
         }
@@ -771,6 +771,9 @@ footer{
             }
         }
     }
+    .white{
+        height: 80px;
+    }
     #cover{
 
         #cover-text{
@@ -786,37 +789,42 @@ footer{
     #about{
         h3{
             font-size: 22px;
+            margin: 35px 0px;
         }
-        .about-me{
-            .center{
-                width: 90%;
-                .about-name{
-                    font-size: 15px;
-                }
-                .about-text{
-                    font-size: 13px;
-                }
-            }
-        }
-        .skills{
-            margin-top: 20px;
-            .center{
-                justify-content: space-around;
-                width: 90%;
-                .skill{
-                    width: 95px;
-                    height: 95px;
-                    h4{
+        .block{
+            flex-direction: column;
+            align-items: center;
+            .about-me{
+                margin-bottom: 25px;
+                width: 95%;
+                .center{
+                    width: 85%;
+                    .about-name{
+                        font-size: 16px;
+                    }
+                    .about-text{
                         font-size: 14px;
-                        i{
-                            font-size: 60px;
-                        }
                     }
                 }
             }
+            .skills{
+                width: 95%;
+                .center{
+                    width: 82%;
+                    .skill{
+                        width: 30%;
+                        h4{
+                            i{
+                                font-size: 60px;
+                            }
+                        }
+                    }
+                }
 
+            }
         }
     }
+    
     #services{
         .center{
             h3{
@@ -879,7 +887,7 @@ footer{
     }
   }
   .white{
-    height: 90px;
+    height: 50px;
   }
   #cover{
         #cover-text{
@@ -902,27 +910,39 @@ footer{
         }
     }
     #about{
+        margin-bottom: 15px;
         h3{
             font-size: 20px;
             margin: 25px auto;
+            margin-top: 30px;
         }
         .block{
-            flex-direction: column;
-            align-items: center;
             .about-me{
-                width:85%;
+                width:90%;
                 margin-bottom: 15px;
             }
             .skills{
-                width:85%;
+                width:90%;
+                .center{
+                    width: 90%;
+                    .skill{
+                        width: 30%;
+                        h4{
+                            i{
+                                font-size: 55px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
     #services{
+        margin-bottom: 0px;
         .center{
             h3{
                 font-size: 20px;
-                padding: 45px;
+                padding: 30px;
             }
             .services-block{
                 .service{
@@ -943,6 +963,9 @@ footer{
         .center{
             h3{
                 font-size: 20px;
+                padding: 30px;
+                margin: 0px auto;
+                margin-bottom: 10px;
             }
             .projects-block{
                 justify-content: space-evenly;
@@ -961,6 +984,7 @@ footer{
     #contact{
         h3{
             font-size: 20px;
+            margin: 30px auto;
         }
         .contact-block{
             .form{
@@ -1004,50 +1028,56 @@ footer{
 }
 @media screen and (max-width: 376px){
     #about{
-        .about-me{
-            width: 90%;
-        }
+        .block{
+            .about-me{
+                width: 90%;
+                margin-bottom: 30px;
+            }
             .skills{
                 width:85%;
                 .center{
-                    justify-content: space-around;
                     .skill{
-                        width: 100px;
-                        height: 100px;
+                        width: 40%;
+                        margin-bottom: 20px;
                         h4{
                             i{
-                                font-size: 65px;
+                                font-size: 58px;
                             }
                         }
                     }
                 }
             }
+        }
     }
 }
 @media screen and (max-width: 321px){
     .white{
-        height: 70px;
+        height: 55px;
       }
       #cover{
+        height: 240px;
         #cover-text{
             h1{
                 font-size: 28px;
-                top: 55%;
+                top: 28%;
                 left:28%;
             }
             h2{
                 font-size:14px;
                 left: 35%;
-                top: 90%;
+                top: 72%;
             }
+        }
+        .button{
+            margin-top: 40px;
         }
     }
     #about{
         h3{
-            margin: 20px 0px 0px 0px;
+            margin:20px auto;
         }
         .skills{
-            width:90%;
+            width:90% !important;
         }
     }
 }
